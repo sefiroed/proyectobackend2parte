@@ -4,17 +4,45 @@ export interface newProductI {
   description?: string;
   codeproduct?: number;
   url?: string;
-  stock?: number;
+  stock: number;
 }
 
 export interface ProductI {
-  _id: string;
-  name: string;
-  price: number;
+  _id?: string;
+  name?: string;
+  price?: number;
   description?: string;
   codeproduct?: number;
   url?: string;
   stock?: number;
+}
+
+export interface IObject {
+  [key: string]: string | number | boolean | unknown;
+}
+
+export interface IKnex {
+  [key: string]: {
+    client: string;
+    connection: {
+      host?: string;
+      user?: string;
+      password?: string;
+      database?: string;
+      filename?: string;
+    };
+    migrations?: {
+      directory: string;
+    };
+    seeds?: {
+      directory: string;
+    };
+    pool?: {
+      min?: number;
+      max?: number;
+    };
+    useNullAsDefault?: boolean;
+  };
 }
 
 export interface ProductQuery {
@@ -24,8 +52,10 @@ export interface ProductQuery {
   codeproduct?: number;
   url?: string;
   stock?: number;
-
-  
+  minStock?: number;
+  maxStock?: number;
+  minPrice?: number;
+  maxPrice?: number;
 
 }
 

@@ -1,5 +1,0 @@
-MONGO_ATLAS_USER=usar_su_user
-MONGO_ATLAS_PASSWORD=usar_su_password
-MONGO_ATLAS_CLUSTER=usar_su_cluster
-MONGO_ATLAS_DBNAME=usar_nombre_db_atlas
-MONGO_LOCAL_DBNAME=usar_nombre_db_rt3

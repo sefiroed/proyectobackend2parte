@@ -8,7 +8,7 @@ import { ProductQuery } from '../models/products/products.interface';
  * with this variable we select the persistence type
  **/ 
 
-const type = TypePersistence.MYSQL;
+const type = TypePersistence.MongoAtlas;
 
 class prodAPI {
   private products;

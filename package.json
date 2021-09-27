@@ -7,10 +7,14 @@
     "build": "node_modules/.bin/tsc",
     "start": "node dist/index.js",
     "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:db": "npx knex migrate:latest --env development",
+    "rollback:db": "npx knex migrate:rollback --env development",
+    "seed:db": "npx knex seed:run --env development",
+    "iniciar:db": "npm run rollback:db && npm run migrate:db && npm run seed:db"
   },
   "keywords": [],
-  "author": "",
+  "author": "Edgard Borges",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -35,9 +39,13 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
+    "firebase-admin": "^9.11.1",
+    "knex": "^0.95.11",
     "moment": "^2.29.1",
     "mongoose": "^6.0.6",
+    "mysql": "^2.18.1",
     "node": "^16.6.1",
+    "sqlite3": "^5.0.2",
     "uuid": "^8.3.2"
   }
 }

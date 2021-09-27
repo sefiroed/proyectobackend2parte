@@ -56,27 +56,6 @@ class Product {
       data: await productsAPI.getProducts(),
     });
     
-    // if(id){
-    //   if(!product){
-    //     return res.status(404).json({
-    //       msg: "Product not found",
-    //     })
-    //   }else{   
-    //     res.json({product})
-    //   }
-    //   return res.status(404).json({
-    //     msg: "ID invalidate",
-    //   })
-    // }
-    // if (product.length < 1) {
-    //   return res.status(400).json({
-    //     error: 'No products loaded',
-    //   });
-    // }
-    // res.json({
-    //   data: productsPersistence.get()
-    // })
-    
   }
 
   checkAddProducts(req: Request, res: Response, next: NextFunction) {
@@ -108,16 +87,6 @@ class Product {
       data: product,
     });
 
-    // if (!product) {
-    //   return res.status(400).json({
-    //     msg: 'Product invalidate',
-    //   });
-    // } else {
-    //   res.json({
-    //     msg: 'product added successfully',
-    //     data: product,
-    //   });
-    // }
   }
 
   async updateProducts (req : Request, res : Response) {
